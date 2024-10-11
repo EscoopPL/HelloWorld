@@ -1,14 +1,10 @@
 identifier helloworld.objects.printer
 class printer extends object
 
-import helloworld.components.text as textComponent
+import escoop.component.string-component
 
-componentlist text
+component-list string-component text
 
-func _init():
-text.set-type(textComponent)
-end
-
-func special-print():
-print(array.to-string(text.get("text")))
+func void print-contents is
+	bulk print text get-value
 end

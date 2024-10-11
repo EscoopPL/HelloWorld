@@ -1,16 +1,12 @@
-identifier helloworld.components.text
-class text extends components
+identifier helloworld.components.text-comp
+class text-comp extends escoop.component.string-component
 
-string content
+string value
 
-func _construct(string textToStore)
-content = textToStore
+construct string value is
+	self value = value
 end
 
-func _component-return(string key)
-match key
-case "text"
-return content
-end
-end
+compfunc string get-value is
+	return value
 end
